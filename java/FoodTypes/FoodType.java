@@ -1,6 +1,25 @@
 package FoodTypes;
 
+import Interfaces.ICarb;
+import Interfaces.IDairy;
+import Interfaces.IFruitAndVeg;
+
+
+import java.util.ArrayList;
+
 public abstract class FoodType {
+
+    private ArrayList<ICarb> carbs;
+    private ArrayList<IDairy> dairies;
+    private ArrayList<IFruitAndVeg> fruitAndVeg;
+
+    public FoodType(String name){
+        this.name = name;
+        this.carbs = new ArrayList<>();
+        this.dairies = new ArrayList<>();
+        this.fruitAndVeg = new ArrayList<>();
+
+    }
 
     private String name;
     private double price;
@@ -12,7 +31,7 @@ public abstract class FoodType {
 
 
 // Constructor
-    public FoodType(String price){
+    public FoodType(int i, String price){
         this.price = 2;
     }
 
@@ -74,7 +93,7 @@ public abstract class FoodType {
 
 
     public String isFoodHealthy(){
-        return ("I'm a " + this.name + "lets see if i'm healthy!");
+        return ("Yes!");
     }
 
     public int calories(){
@@ -82,6 +101,19 @@ public abstract class FoodType {
     }
 
     public String addSeedless() {
-        return addSeedless();
+        return ("No!");
     }
+
+    public String colour(){
+        return ("Im " + colour + "!");
+    }
+
+    public String origin(){
+        return ("Im from " + origin + "!");
+    }
+    public String organic(){
+        return "Is this organic?";
+    }
+
+
 }

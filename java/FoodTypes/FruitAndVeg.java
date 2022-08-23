@@ -1,16 +1,17 @@
 package FoodTypes;
 
+
 public class FruitAndVeg extends FoodType {
 
     private double sugarContent;
 
-    public FruitAndVeg(String price, double sugarContent) {
-        super(price);
+    public FruitAndVeg(double price, double sugarContent) {
+        super(2, "300");
         this.sugarContent = sugarContent;
     }
 
 
-    // Needs an IF / else statement to print both Y and N
+
     @Override
     public String isFoodHealthy() {
         return "Yes!";
@@ -19,5 +20,6 @@ public class FruitAndVeg extends FoodType {
     public String addSeedless(){
         return "No!";
     }
+
 
 }
